@@ -9,7 +9,7 @@ app.get('/', function(request, response) {
 })
 
 app.get('/ip', function(request, response) {
-  response.send(process.env.ip)
+  response.json({ip: process.env.ip})
 })
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
